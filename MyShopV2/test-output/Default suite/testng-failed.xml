@@ -6,7 +6,7 @@
       <class name="com.MyShopV2.Tests.TC_MyAccountPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="verifyRegistrationAndLogin"/>
+          <include name="VerifyLogin"/>
         </methods>
       </class> <!-- com.MyShopV2.Tests.TC_MyAccountPageTest -->
     </classes>

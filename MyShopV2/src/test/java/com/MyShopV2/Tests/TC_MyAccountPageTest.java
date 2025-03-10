@@ -12,14 +12,17 @@ import com.MyshopV2.pageObjects.registeredUserAccount;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.io.IOException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class TC_MyAccountPageTest extends CommonToAllTest{
 	
 	private static final Logger logger = LogManager.getLogger(TC_MyAccountPageTest.class);
-	
-			@Test
+			
+			
+			@Test(enabled=false)
 		    public void verifyRegistrationAndLogin() {
 		    		
 		    		//logger.info("***************TestCase Verify Registration and Login starts*****************");
@@ -48,6 +51,37 @@ public class TC_MyAccountPageTest extends CommonToAllTest{
 					
 			        assertThat(userName).isNotBlank().isNotNull().isNotEmpty();
 			        Assert.assertEquals("Jake Adam",userName);
-			       
 		    }
+			
+			@Test
+			public void VerifyLogin() throws IOException {
+				
+				IndexPage IndexPageObj = new IndexPage(DriverManager.getDriver());
+				IndexPageObj.launchURL();
+		        
+				myAccount myAccountObj  = new myAccount(DriverManager.getDriver());
+				
+				myAccountObj.enterRegisteredEmailAddress("automate@gmail.com");
+				myAccountObj.enterRegisteredPwd("cs1234");
+				myAccountObj.Submit();
+				
+				registeredUserAccount registeredUserAccountObj = new registeredUserAccount(DriverManager.getDriver());
+				String userName = registeredUserAccountObj.getUserName();
+				
+				assertThat(userName).isNotBlank().isNotNull().isNotEmpty();
+		        Assert.assertEquals("Jake adam",userName);
+		        
+		        if(userName.equals("Jake adam"))
+				{
+					logger.info("VerifyLogin - Passed");
+					Assert.assertTrue(true);
+				}
+				else
+				{
+					logger.info("VerifyLogin - Failed");
+					captureScreenShot(driver,"VerifyLogin");
+					Assert.assertTrue(false);
+				}
+				logger.info("***************TestCase Verify Login ends*****************"); 
+			}
 }

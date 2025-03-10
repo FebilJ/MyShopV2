@@ -49,10 +49,10 @@ public class DriverManager {
 	        }
 	    }
 	    // When we want to close the browser
-//	    public static void down(){
-//	        if (driver != null) {
-//	            driver.quit();
-//	            driver = null;
-//	        }
-//	    }
+	    public static void down(){
+	        if (driver != null) {
+	            driver.quit();
+	            driver = null;
+	        }
+	    }
 }

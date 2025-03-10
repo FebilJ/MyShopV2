@@ -17,16 +17,34 @@ public class myAccount extends CommonToAllPage{
 				    }
 					
 
-					//Step 1 - Page Locators
+					//Page Locators
+					//For new users
 					private By createEmailID = By.id("email_create");
-					
 					private By SubmitCreate = By.id("SubmitCreate");
 					
+					//For Already registered users
+					private By registeredUsersEmail = By.id("email");
+					private By registeredUsersPwd = By.id("passwd");
+					private By SubmitLogin = By.id("SubmitLogin");
+					
 					//Page Actions
-					//Clicking on Create an account 
+					//For Creating new  an account
 					 public void enterCreateEmailAddress(String user) {
 						 		enterInput(createEmailID, user);
 						 		clickElement(SubmitCreate);
-							    custom_wait2();
+							    custom_wait();
 				}
+					//For login existing users
+					 public void enterRegisteredEmailAddress(String user) {
+					 		enterInput(registeredUsersEmail, user);
+						    custom_wait();
+			}
+					 public void enterRegisteredPwd(String pwd) {
+					 		enterInput(registeredUsersPwd, pwd);
+						    custom_wait();
+			}
+					 public void Submit() {
+					 		clickElement(SubmitLogin);
+						    custom_wait();
+			}
 }

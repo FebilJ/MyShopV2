@@ -4,7 +4,6 @@ import com.MyshopV2.base.CommonToAllPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-
 public class IndexPage extends CommonToAllPage{
 
 					WebDriver driver;

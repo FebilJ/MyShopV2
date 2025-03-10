@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-08T17:10:10 IST" name="Default suite" finished-at="2025-03-08T17:10:33 IST" duration-ms="22381">
+  <suite started-at="2025-03-10T23:09:18 IST" name="Suite" finished-at="2025-03-10T23:10:00 IST" duration-ms="41585">
     <groups>
     </groups>
-    <test started-at="2025-03-08T17:10:10 IST" name="Default test" finished-at="2025-03-08T17:10:33 IST" duration-ms="22381">
-      <class name="com.MyShopV2.Tests.TC_MyAccountPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.MyShopV2.Tests.TC_MyAccountPageTest@74589991]" started-at="2025-03-08T17:10:10 IST" name="setUp" finished-at="2025-03-08T17:10:13 IST" duration-ms="2185" status="PASS">
+    <test started-at="2025-03-10T23:09:18 IST" name="Test" finished-at="2025-03-10T23:10:00 IST" duration-ms="41585">
+      <class name="com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting@73302995]" started-at="2025-03-10T23:09:20 IST" name="setUp" finished-at="2025-03-10T23:09:24 IST" duration-ms="4766" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistrationAndLogin()[pri:0, instance:com.MyShopV2.Tests.TC_MyAccountPageTest@74589991]" started-at="2025-03-08T17:10:13 IST" name="verifyRegistrationAndLogin" finished-at="2025-03-08T17:10:33 IST" duration-ms="20141" status="PASS">
+        <test-method signature="VerifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting@73302995]" started-at="2025-03-10T23:09:24 IST" name="VerifyLogin" data-provider="LoginDataProvider" finished-at="2025-03-10T23:09:44 IST" duration-ms="20075" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[automate@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cs1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Jake adam]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyRegistrationAndLogin -->
-      </class> <!-- com.MyShopV2.Tests.TC_MyAccountPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- VerifyLogin -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting@73302995]" started-at="2025-03-10T23:09:44 IST" name="setUp" finished-at="2025-03-10T23:09:44 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="VerifyLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting@73302995]" started-at="2025-03-10T23:09:44 IST" name="VerifyLogin" data-provider="LoginDataProvider" finished-at="2025-03-10T23:10:00 IST" duration-ms="15449" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[automate1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cs1234@1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Jake Adam]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLogin -->
+      </class> <!-- com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
