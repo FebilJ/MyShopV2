@@ -1,7 +1,6 @@
 package com.MyshopV2.pageObjects;
 
 import com.MyshopV2.base.CommonToAllPage;
-import com.MyshopV2.utils.PropertiesReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -18,7 +17,9 @@ public class registeredUserAccount extends CommonToAllPage{
 					//Step 1 - Page Locators
 					private By userName = By.xpath("//a[@class='account']");
 					private By signOut = By.linkText("Sign out");
-
+					private By searchBox = By.id("search_query_top");
+					private By submitSearch = By.name("submit_search");
+					
 					//Page Actions
 					 public String getUserName() {
 						 		String text = getText(userName);
@@ -27,8 +28,13 @@ public class registeredUserAccount extends CommonToAllPage{
 					 
 					 public void clickOnSignOut() {
 					 		clickElement(signOut);
-				 }
+					 }
+					 
+					 public void EnterDataInSearchBox(String searchKey) {
+					 		enterInput(searchBox, searchKey);
+					 }
+					 
+					 public void ClickOnSearchButton() {
+					 		clickElement(submitSearch);
+					 }
 }
-
-
-

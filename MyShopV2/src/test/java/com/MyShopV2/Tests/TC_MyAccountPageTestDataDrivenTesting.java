@@ -25,9 +25,7 @@ public class TC_MyAccountPageTestDataDrivenTesting extends CommonToAllTest{
 			
 			@Test(enabled=false)
 		    public void verifyRegistrationAndLogin() {
-		    		
 		    		//logger.info("***************TestCase Verify Registration and Login starts*****************");
-		    	
 					IndexPage IndexPageObj = new IndexPage(DriverManager.getDriver());
 					IndexPageObj.launchURL();
 			        
@@ -44,7 +42,6 @@ public class TC_MyAccountPageTestDataDrivenTesting extends CommonToAllTest{
 
 //					AccountCreationDetailsObj.selectMonth("7");
 //					AccountCreationDetailsObj.selectYear("2001");
-					
 //			        logger.info("End of the testLoginNegativeVWO !");
 					
 					registeredUserAccount registeredUserAccountObj = new registeredUserAccount(DriverManager.getDriver());
@@ -61,7 +58,6 @@ public class TC_MyAccountPageTestDataDrivenTesting extends CommonToAllTest{
 				IndexPageObj.launchURL();
 		        
 				myAccount myAccountObj  = new myAccount(DriverManager.getDriver());
-				
 				myAccountObj.enterRegisteredEmailAddress(userEmail);
 				myAccountObj.enterRegisteredPwd(userPwd);
 				myAccountObj.Submit();

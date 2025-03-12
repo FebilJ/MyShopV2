@@ -16,7 +16,6 @@ public class myAccount extends CommonToAllPage{
 				        this.driver = driver;
 				    }
 					
-
 					//Page Locators
 					//For new users
 					private By createEmailID = By.id("email_create");
@@ -32,12 +31,11 @@ public class myAccount extends CommonToAllPage{
 					 public void enterCreateEmailAddress(String user) {
 						 		enterInput(createEmailID, user);
 						 		clickElement(SubmitCreate);
-							    custom_wait();
+							    
 				}
 					//For login existing users
 					 public void enterRegisteredEmailAddress(String user) {
 					 		enterInput(registeredUsersEmail, user);
-						    custom_wait();
 			}
 					 public void enterRegisteredPwd(String pwd) {
 					 		enterInput(registeredUsersPwd, pwd);

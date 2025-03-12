@@ -19,9 +19,9 @@ public class CommonToAllTest {
 			         DriverManager.init();
 			     }
 			
-//			     @AfterMethod
-//			     public void tearDown(){
-//			         DriverManager.down();
+//			     //@AfterMethod
+//			     //public void tearDown(){
+		         //DriverManager.down();
 //			     }
 				 
 				//user method to capture screen shot

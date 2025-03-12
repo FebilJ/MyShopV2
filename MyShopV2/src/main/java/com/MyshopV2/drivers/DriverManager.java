@@ -11,9 +11,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class DriverManager {
+	
 	public static WebDriver driver;
 
-	public static WebDriver getDriver() {
+public static WebDriver getDriver() {
 		return driver;
 	}
 
@@ -49,10 +50,10 @@ public class DriverManager {
 	        }
 	    }
 	    // When we want to close the browser
-	    public static void down(){
-	        if (driver != null) {
-	            driver.quit();
-	            driver = null;
-	        }
-	    }
+//	    public static void down(){
+//	        if (driver != null) {
+//	            driver.quit();
+//	            driver = null;
+//	        }
+//	    }
 }

@@ -6,6 +6,7 @@ import org.testng.annotations.*;
 import com.MyShopV2.base.CommonToAllTest;
 import com.MyshopV2.drivers.DriverManager;
 import com.MyshopV2.pageObjects.AccountCreationDetails;
+import com.MyshopV2.pageObjects.AddMyFirstAddress;
 import com.MyshopV2.pageObjects.IndexPage;
 import com.MyshopV2.pageObjects.myAccount;
 import com.MyshopV2.pageObjects.registeredUserAccount;
@@ -41,11 +42,6 @@ public class TC_MyAccountPageTest extends CommonToAllTest{
 					AccountCreationDetailsObj.enterPassword("cs1234@2");
 					AccountCreationDetailsObj.register();
 
-//					AccountCreationDetailsObj.selectMonth("7");
-//					AccountCreationDetailsObj.selectYear("2001");
-					
-//			        logger.info("End of the testLoginNegativeVWO !");
-					
 					registeredUserAccount registeredUserAccountObj = new registeredUserAccount(DriverManager.getDriver());
 					String userName = registeredUserAccountObj.getUserName();
 					
@@ -83,5 +79,37 @@ public class TC_MyAccountPageTest extends CommonToAllTest{
 					Assert.assertTrue(false);
 				}
 				logger.info("***************TestCase Verify Login ends*****************"); 
+			}
+			
+			@Test
+			public void verifyAddNewAddress() throws IOException {
+			
+				//String searchKey = "T-shirts";
+				logger.info("\n***************TestCase Search Product started*****************"); 
+		
+				//Sign in 
+				IndexPage IndexPageObj = new IndexPage(DriverManager.getDriver());
+				IndexPageObj.launchURL();
+		
+				//Enter account details- email and password
+				myAccount myAccountObj  = new myAccount(DriverManager.getDriver());
+				
+				logger.info("User Email and Password entered.");
+				myAccountObj.enterRegisteredEmailAddress("automate@gmail.com");
+				myAccountObj.enterRegisteredPwd("cs1234");
+				
+				logger.info("Sign In link clicked");
+				myAccountObj.Submit();
+				
+				AddMyFirstAddress AddMyFirstAddressobj = new AddMyFirstAddress(DriverManager.getDriver());
+				AddMyFirstAddressobj.clickOnMyFirstAddressPage();
+				
+				AddMyFirstAddressobj.enterAddrees("1234 Demo Lane, SC 12345, United States");
+				AddMyFirstAddressobj.enterCity("New York");
+				AddMyFirstAddressobj.enterState("California");
+				AddMyFirstAddressobj.enterPostalCode("12345");
+				AddMyFirstAddressobj.enterCountry("United States");
+				AddMyFirstAddressobj.enterHomePhone("9845678524");
+				AddMyFirstAddressobj.submitSave();
 			}
 }
