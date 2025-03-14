@@ -1,6 +1,7 @@
 package com.MyshopV2.base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,10 +11,18 @@ import static com.MyshopV2.drivers.DriverManager.getDriver;
 import java.time.Duration;
 public class CommonToAllPage {
 				
+				WebDriver driver;
+				
 				public void openMyShopURL(){
 			        getDriver().get(PropertiesReader.readKey("url"));
 			    }
 				
+				//explicit wait
+				public  WebDriverWait getWait(WebDriver driver){
+			        return new WebDriverWait(driver, Duration.ofSeconds(10));
+			    }
+				
+				//Implicit wait
 				public void custom_wait(){
 			        try {
 			            Thread.sleep(3000);
