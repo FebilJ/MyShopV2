@@ -17,11 +17,11 @@ public class OrderConfirmationPage extends CommonToAllPage{
 					//Step 1 - Page Locators
 				    private By confirmOrder = By.xpath("//span[normalize-space()='I confirm my order']");
 				    private By successMessage = By.xpath("//p[normalize-space()='Your order on My Shop is complete.']");
-				    private By signOut = By.xpath("//a[@title='log me out']");
+				    private By signOut = By.linkText("Sign out");
 				  
 					
 					//Page Actions
-					public void clickOnconfirmOrder(){
+					public void clickOnConfirmOrder(){
 				 		clickElement(confirmOrder);
 					}
 					

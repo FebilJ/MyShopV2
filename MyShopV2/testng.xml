@@ -5,9 +5,10 @@
 		<listener
 			class-name="com.MyshopV2.utils.ExtentListnerClass"></listener>
 	</listeners>
-	<test thread-count="5" name="Test">
+	<test name="Test">
 		<classes>
-			<class name="com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting" />
+			<class name="com.MyShopV2.Tests.TC_MyAccountPageTest" />
+			<class name="com.MyShopV2.Tests.TC_ProductPageTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

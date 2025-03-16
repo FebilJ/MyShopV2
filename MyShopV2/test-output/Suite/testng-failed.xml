@@ -6,12 +6,19 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting">
+      <class name="com.MyShopV2.Tests.TC_MyAccountPageTest">
         <methods>
-          <include name="VerifyLogin" invocation-numbers="1"/>
           <include name="setUp"/>
+          <include name="VerifySignOut"/>
         </methods>
-      </class> <!-- com.MyShopV2.Tests.TC_MyAccountPageTestDataDrivenTesting -->
+      </class> <!-- com.MyShopV2.Tests.TC_MyAccountPageTest -->
+      <class name="com.MyShopV2.Tests.TC_ProductPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="VerifyBuyProduct"/>
+          <include name="VerifySearchProduct"/>
+        </methods>
+      </class> <!-- com.MyShopV2.Tests.TC_ProductPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

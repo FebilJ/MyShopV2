@@ -21,5 +21,10 @@ public class IndexPage extends CommonToAllPage{
 						 		openMyShopURL();
 							     clickElement(SignInLink);
 							     custom_wait();
-				}
+					 }
+					 
+					//retriving title
+					 public String getPageTitle() {
+						 		return(driver.getTitle());
+					 }
 }

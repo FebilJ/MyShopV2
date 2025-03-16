@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.MyShopV2.Tests.Demo_Test">
+      <class name="com.MyShopV2.Tests.TC_MyAccountPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="verifySearchProduct"/>
+          <include name="VerifySignOut"/>
         </methods>
-      </class> <!-- com.MyShopV2.Tests.Demo_Test -->
+      </class> <!-- com.MyShopV2.Tests.TC_MyAccountPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,8 +1,14 @@
 package com.MyshopV2.pageObjects;
 
 import com.MyshopV2.base.CommonToAllPage;
+
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OrderPaymentPage extends CommonToAllPage{
 
@@ -20,10 +26,14 @@ public class OrderPaymentPage extends CommonToAllPage{
 					
 					//Page Actions
 					public void clickOnPayByBankWire(){
-				 		clickElement(payByBankWire);
+						WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+						 WebElement bankWireCheckOut = wait.until(ExpectedConditions.elementToBeClickable(payByBankWire));
+						 clickElement(bankWireCheckOut);
 					}
 					
 					 public void clickOnPayByCheque(){
-						 		clickElement(payByCheque);
+						 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+						 WebElement bankCheckOut = wait.until(ExpectedConditions.elementToBeClickable(payByCheque));
+						 clickElement(bankCheckOut);
 					}
 }

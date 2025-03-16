@@ -71,7 +71,7 @@ public class ProductPage extends CommonToAllPage{
 					 
 					 public void clickOnProceedToCheckOut(){
 							 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-							 WebElement checkOut = wait.until(ExpectedConditions.elementToBeClickable(proceedToCheckout)));
+							 WebElement checkOut = wait.until(ExpectedConditions.elementToBeClickable(proceedToCheckout));
 							 clickElement(checkOut);
 					 }
 }

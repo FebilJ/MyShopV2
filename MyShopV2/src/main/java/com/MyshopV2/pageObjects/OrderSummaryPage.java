@@ -15,10 +15,10 @@ public class OrderSummaryPage extends CommonToAllPage{
 				    }
 				    
 					//Step 1 - Page Locators
-					private By proceedToCheckout = By.xpath("(//span[normalize-space()='Proceed to checkout'])[2]");
+					private By proceedToCheckout = By.linkText("Proceed to checkout");
 					
 					//Page Actions
-					 public void clickonProceedtoCheckout() {
+					 public void clickOnProceedtoCheckout() {
 						 		clickElement(proceedToCheckout);
 					 }
 }

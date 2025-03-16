@@ -23,7 +23,7 @@ public class OrderShippingPage extends CommonToAllPage{
 				 		clickElement(termsOfServices);
 			 }
 					
-					 public void clickonProceedtoCheckout() {
+					 public void clickOnProceedToCheckout() {
 						 		clickElement(proceedFromAddressPage);
 					 }
 }

@@ -23,7 +23,7 @@ public class TC_MyAccountPageTest extends CommonToAllTest{
 	private static final Logger logger = LogManager.getLogger(TC_MyAccountPageTest.class);
 			
 			
-			@Test(enabled=false)
+			@Test(enabled = false)
 		    public void verifyRegistrationAndLogin() {
 		    		
 		    		//logger.info("***************TestCase Verify Registration and Login starts*****************");
@@ -32,14 +32,14 @@ public class TC_MyAccountPageTest extends CommonToAllTest{
 					IndexPageObj.launchURL();
 			        
 					myAccount myAccountObj  = new myAccount(DriverManager.getDriver());
-					myAccountObj.enterCreateEmailAddress("automate2@gmail.com");
+					myAccountObj.enterCreateEmailAddress("automate3@gmail.com");
 					
 					AccountCreationDetails AccountCreationDetailsObj = new AccountCreationDetails(DriverManager.getDriver());
 					
 					AccountCreationDetailsObj.selectTitleMr();
 					AccountCreationDetailsObj.enterCustomerFirstName("Jake");
 					AccountCreationDetailsObj.enterCustomerLastName("Adam");
-					AccountCreationDetailsObj.enterPassword("cs1234@2");
+					AccountCreationDetailsObj.enterPassword("cs1234@3");
 					AccountCreationDetailsObj.register();
 
 					registeredUserAccount registeredUserAccountObj = new registeredUserAccount(DriverManager.getDriver());
@@ -81,8 +81,9 @@ public class TC_MyAccountPageTest extends CommonToAllTest{
 				logger.info("***************TestCase Verify Login ends*****************"); 
 			}
 			
-			@Test
-			public void verifyAddNewAddress() throws IOException {
+			//extra TC
+			@Test(enabled=false)
+			public void verifyAddNewAddress() throws IOException { 
 			
 				//String searchKey = "T-shirts";
 				logger.info("\n***************TestCase Search Product started*****************"); 
@@ -111,5 +112,42 @@ public class TC_MyAccountPageTest extends CommonToAllTest{
 				AddMyFirstAddressobj.enterCountry("United States");
 				AddMyFirstAddressobj.enterHomePhone("9845678524");
 				AddMyFirstAddressobj.submitSave();
+			}
+			
+			@Test
+			public void VerifySignOut() throws IOException 
+			{
+
+				logger.info("***************TestCase Verify Sign out starts*****************"); 
+
+				IndexPage IndexPageObj = new IndexPage(DriverManager.getDriver());
+
+				IndexPageObj.launchURL();
+				logger.info("Clicked on sign in link");
+				
+				myAccount myAccountObj  = new myAccount(DriverManager.getDriver());
+				
+				myAccountObj.enterRegisteredEmailAddress("automate@gmail.com");
+				logger.info("Entered email address");
+				myAccountObj.enterRegisteredPwd("cs1234");
+				logger.info("Entered password");
+				myAccountObj.Submit();
+				logger.info("Clicked on sign in link..");
+
+				registeredUserAccount registeredUserAccountObj = new registeredUserAccount(DriverManager.getDriver());
+				registeredUserAccountObj.clickOnSignOut();
+
+				if(IndexPageObj.getPageTitle().equals("Login - My Shop"))
+				{
+					logger.info("VerifySignOut - Passed");
+					Assert.assertTrue(true);
+				}
+				else
+				{
+					logger.info("VerifySignOut - Failed");
+					//captureScreenShot(driver,"VerifySignOut");
+					Assert.assertTrue(false);
+				}
+				logger.info("***************TestCase Verify Sign out ends*****************"); 
 			}
 }

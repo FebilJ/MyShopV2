@@ -18,7 +18,7 @@ public class OrderAddressPage extends CommonToAllPage{
 					private By proceedFromAddressPage = By.xpath("(//span[normalize-space()='Proceed to checkout'])[2]");
 					
 					//Page Actions
-					 public void clickonProceedtoCheckout() {
+					 public void clickOnProceedToCheckout() {
 						 		clickElement(proceedFromAddressPage);
 					 }
 }
